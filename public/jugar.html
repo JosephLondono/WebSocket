@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego de Preguntas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <!-- Sección principal del juego -->
+        <div class="game">
+          <h1>Juego de Preguntas</h1>
+          <div id="gameContent">
+            <!-- Contenido dinámico del juego -->
+            <div id="subtitle">Esperando jugadores...</div>
+            <button id="botonEmpezar" disabled>Empezar Juego</button>
+            <!-- Añadir junto al botón de empezar -->
+            <button
+              id="descargarMensajes"
+              style="display: none; margin-left: 10px"
+              class="btn-blue"
+            >
+              Descargar Chat
+            </button>
+          </div>
+
+          <!-- Puntuaciones y preguntas -->
+          <div id="puntuaciones"></div>
+          <div id="timer" class="timer">El juego comenzará pronto...</div>
+          <div id="game"></div>
+        </div>
+
+        <!-- Sección de jugadores y chat (escritorio) -->
+        <div class="players">
+          <div class="divPlayers">
+            <h2>Jugadores Conectados</h2>
+            <ul id="listaPlayers"></ul>
+          </div>
+
+          <div class="divChat">
+            <h2>Chat</h2>
+            <ul id="message"></ul>
+            <form>
+              <input
+                id="messageInput"
+                type="text"
+                placeholder="Escribe tu mensaje..."
+                autocomplete="off"
+              />
+              <button id="sendButton" type="submit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-send-2"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M4.698 4.034l16.302 7.966l-16.302 7.966a.503 .503 0 0 1 -.546 -.124a.555 .555 0 0 1 -.12 -.568l2.468 -7.274l-2.468 -7.274a.555 .555 0 0 1 .12 -.568a.503 .503 0 0 1 .546 -.124z"
+                  />
+                  <path d="M6.5 12h14.5" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Panel móvil -->
+    <button class="mobile-menu-toggle">💬</button>
+    <div class="mobile-panel">
+      <button class="panel-close-btn">✕</button>
+      <div class="players">
+        <h2>🎮 Jugadores</h2>
+        <ul id="listaPlayersMobile"></ul>
+      </div>
+      <div class="divChat">
+        <h2>💬 Chat</h2>
+        <ul id="messageMobile"></ul>
+        <form>
+          <input
+            id="messageInputMobile"
+            type="text"
+            placeholder="Escribe tu mensaje..."
+            autocomplete="off"
+          />
+          <button id="sendButtonMobile" type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-send-2"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M4.698 4.034l16.302 7.966l-16.302 7.966a.503 .503 0 0 1 -.546 -.124a.555 .555 0 0 1 -.12 -.568l2.468 -7.274l-2.468 -7.274a.555 .555 0 0 1 .12 -.568a.503 .503 0 0 1 .546 -.124z"
+              />
+              <path d="M6.5 12h14.5" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="jugar.js" type="module"></script>
+  </body>
+</html>

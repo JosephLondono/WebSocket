@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preguntas al Azar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>SALA <span id="idSala"></span></h1>
+    <h2 id="subtitle">
+      Esperando a que se unan los jugadores...
+      <a href="/jugar?name=Prueba" target="_blank">Pruebasxd</a>
+    </h2>
+    <div class="container">
+      <div class="game" id="game">
+        <h3>Pregunta</h3>
+        <div class="questionsDiv">
+          <h3>¿Cuál es la capital de España?</h3>
+          <ul>
+            <li><button class="btn-blue">Madrid</button></li>
+            <li><button class="btn-red">Barcelona</button></li>
+            <li><button class="btn-green">Sevilla</button></li>
+            <li><button class="btn-yellow">Valencia</button></li>
+          </ul>
+        </div>
+        <div class="timer">Tiempo restante: 30</div>
+      </div>
+      <div class="players">
+        <div class="divPlayers">
+          <h3>Jugadores</h3>
+          <ul id="listaPlayers">
+            <li><span>Te has unido a esta sala.</span></li>
+          </ul>
+        </div>
+        <div class="divChat">
+          <h3>Chat</h3>
+          <ul id="message">
+            <li><span>Te has unido a esta sala.</span></li>
+          </ul>
+          <form>
+            <input
+              type="text"
+              id="messageInput"
+              placeholder="Escribe un mensaje..."
+              autocomplete="off"
+            />
+            <input type="submit" value="Enviar" id="sendButton" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

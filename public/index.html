@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego Adivinanzas</title>
+    <script type="module" src=""></script>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      main {
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        margin-bottom: 10px;
+        color: #0056b3;
+        font-size: 50px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      label {
+        font-size: 1.2rem;
+      }
+      input {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      button {
+        padding: 10px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+    <main>
+      <h1>Adivinanzas</h1>
+      <p>Juego de adivinanzas</p>
+      <div id="app">
+        <form action="/jugar.html" method="GET">
+          <input
+            type="text"
+            name="name"
+            placeholder="Ingresa tu nombre"
+            required
+            oninput="this.value = this.value.replace(/\+/g, ' ')"
+          />
+          <button type="submit">Jugar</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
