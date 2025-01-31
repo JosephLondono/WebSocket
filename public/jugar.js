@@ -235,12 +235,12 @@ socket.on("nueva-pregunta", (pregunta) => {
                 )
                 .join("")}
           </ul>
-          <div class="question-timer">Tiempo restante: 20</div>
+          <div class="question-timer">Tiempo restante: 25</div>
       </div>
   `;
 
   const questionTimerElement = elements.game.querySelector(".question-timer");
-  let tiempoRestante = 20;
+  let tiempoRestante = 25;
 
   // Limpiar el temporizador anterior si existe
   if (window.questionTimer) {
