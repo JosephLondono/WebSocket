@@ -243,7 +243,7 @@ function enviarPreguntas() {
     io.emit("nueva-pregunta", dataSend);
     preguntaActual++;
 
-    let tiempoRestante = 20;
+    let tiempoRestante = 25;
     // Guardar el temporizador en room.timerInterval antes de crearlo
     clearInterval(room.timerInterval); // Limpiar el temporizador anterior si existe
 
